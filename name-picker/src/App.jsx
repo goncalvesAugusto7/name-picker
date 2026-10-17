@@ -375,14 +375,15 @@ export default function App() {
 
   return (
     <main className="min-h-dvh w-full max-w-full bg-slate-950 px-3 py-5 text-white sm:px-6 sm:py-8 lg:px-8">
-      <div className="mt-4 flex justify-center">
-        <InstallButton />
-      </div>
       <div className="mx-auto w-full min-w-0 max-w-6xl">
         {/* Cabeçalho */}
         <header className="mb-8 flex min-w-0 flex-col items-center gap-3 text-center sm:mb-10">
           <div className="flex size-14 items-center justify-center rounded-2xl border border-amber-400/30 bg-amber-400/10 sm:size-16">
             <Sparkles className="size-7 text-amber-300 sm:size-8" />
+          </div>
+
+          <div className="mt-4 flex justify-center">
+            <InstallButton />
           </div>
 
           <h1 className="break-words text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">
@@ -454,7 +455,7 @@ export default function App() {
                 setNamesText(event.target.value)
                 setGroups([])
               }}
-              placeholder={'Ana\nBruno\nCarlos\nDaniela'}
+              placeholder={'Augusto\nLindomar\nCiclana\nFulano'}
               rows={6}
               className="w-full min-w-0 resize-y rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 text-base leading-relaxed text-white outline-none transition placeholder:text-slate-600 focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20"
             />

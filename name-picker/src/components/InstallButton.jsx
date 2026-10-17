@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react'
-import { Download } from 'lucide-react'
+import { Download, CheckCircle2 } from 'lucide-react'
 
 export default function InstallButton() {
   const [installPrompt, setInstallPrompt] = useState(null)
@@ -33,19 +33,24 @@ export default function InstallButton() {
   }, [])
 
   async function handleInstall() {
-    if (!installPrompt) return
-
-    await installPrompt.prompt()
-    const result = await installPrompt.userChoice
-
-    if (result.outcome === 'accepted') {
+    if (installPrompt) {
+      await installPrompt.prompt()
+      await installPrompt.userChoice
       setInstallPrompt(null)
-    } else {
-      setInstallPrompt(null)
+      return
     }
+
+    alert(
+      'Para instalar, abra o menu do navegador e procure a opção "Instalar aplicativo" ou "Adicionar à tela inicial".',
+    )
   }
 
-  if (installed || !installPrompt) return null
+  if (installed) {
+    return (
+      <>
+      </>
+    )
+  }
 
   return (
     <button
@@ -53,7 +58,7 @@ export default function InstallButton() {
       onClick={handleInstall}
       className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-2.5 text-sm font-semibold text-amber-200 transition hover:bg-amber-400/20"
     >
-      <Download className="size-4" />
+      <Download size={16} aria-hidden="true" />
       Instalar aplicativo
     </button>
   )

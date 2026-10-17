@@ -1,5 +1,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import InstallButton from './components/InstallButton'
 import {
   UsersRound,
   Plus,
@@ -374,6 +375,9 @@ export default function App() {
 
   return (
     <main className="min-h-dvh w-full max-w-full bg-slate-950 px-3 py-5 text-white sm:px-6 sm:py-8 lg:px-8">
+      <div className="mt-4 flex justify-center">
+        <InstallButton />
+      </div>
       <div className="mx-auto w-full min-w-0 max-w-6xl">
         {/* Cabeçalho */}
         <header className="mb-8 flex min-w-0 flex-col items-center gap-3 text-center sm:mb-10">

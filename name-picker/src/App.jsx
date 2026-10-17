@@ -143,7 +143,7 @@ export default function App() {
       try {
         const generatedAudio = await ttsRef.current.falar(
           `${name}.`,
-          { velocidade: 0.8 },
+          { velocidade: 0.7 },
         )
 
         const blob = generatedAudio.paraBlob()

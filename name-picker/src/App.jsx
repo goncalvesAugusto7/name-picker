@@ -387,13 +387,13 @@ export default function App() {
           </div>
 
           <h1 className="break-words text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">
-            Sorteador de Nomes
+            Name Picker
           </h1>
+          
+          <h2 className="break-words text-xl font-black tracking-tight sm:text-xl md:text-xl">
+            Sorteador de Nomes e Organizador de Grupos Maneiríssimo do Augusto
+          </h2>
 
-          <p className="max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
-            Sorteie participantes de forma aleatória ou organize grupos com
-            apenas alguns cliques.
-          </p>
         </header>
 
         {/* Conteúdo principal */}
@@ -685,8 +685,7 @@ export default function App() {
                   Formação de grupos
                 </h2>
                 <p className="text-sm leading-relaxed text-slate-400">
-                  Misture os participantes em duplas e, quando necessário, um
-                  trio.
+                  Misture os participantes em duplas e trio(s).
                 </p>
               </div>
             </div>
@@ -749,7 +748,7 @@ export default function App() {
         </section>
 
         <footer className="px-2 py-8 text-center text-xs text-slate-600">
-          Sorteador de Nomes
+          Name Picker do Augusto
         </footer>
       </div>
 
